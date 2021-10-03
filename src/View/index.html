@@ -1,0 +1,27 @@
+{% if users > 1 %}
+{% for user in users %}
+<div class="col">
+	<div class="card my-4" style="width: 12rem;">
+		<img src="{{ user.avatar_url }}" class="card-img-top" alt="...">
+		<div class="card-body">
+			<h5 class="card-title">{{ user.login }}</h5>
+			<p class="card-text">{{ user.bio }}</p>
+			<a href="{{ user.html_url }}" target="_blank" class="btn btn-primary">Ver mais...</a>
+		</div>
+	</div>
+</div>
+{% endfor %}
+{% elseif user %}
+<div class="card" style="width: 18rem;">
+	<img src="{{ user.avatar_url }}" class="card-img-top" alt="...">
+	<div class="card-body">
+		<h5 class="card-title">{{ user.login }}</h5>
+		<p class="card-text">{{ user.bio }}</p>
+		<a href="{{ user.html_url }}" target="_blank" class="btn btn-primary">Ver mais...</a>
+	</div>
+</div>
+{% else %}
+<h1>Nenhum resultado</h1>
+{% endif %}
+
+

@@ -1,0 +1,20 @@
+{
+    "name": "wesley/web_api",
+    "description": "Web App consumer api github",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Src\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Wesley Gessner",
+            "email": "wesley-gessner@hotmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "twig/twig": "^3.3"
+    }
+}
